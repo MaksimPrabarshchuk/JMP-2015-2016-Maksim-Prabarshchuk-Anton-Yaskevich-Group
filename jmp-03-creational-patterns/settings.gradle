@@ -1,0 +1,1 @@
+include 'singleton', 'factory', 'abstract-factory', 'builder', 'prototype'
