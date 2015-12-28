@@ -1,0 +1,1 @@
+include 'adapter', 'bridge', 'composite', 'decorator', 'facade', 'flyweight', 'proxy'

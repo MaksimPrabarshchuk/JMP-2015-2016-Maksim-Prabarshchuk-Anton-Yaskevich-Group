@@ -1,0 +1,4 @@
+task run(type: JavaExec) {
+    main = 'by.epam.mentoring.Main'
+    classpath = sourceSets.main.runtimeClasspath
+}
