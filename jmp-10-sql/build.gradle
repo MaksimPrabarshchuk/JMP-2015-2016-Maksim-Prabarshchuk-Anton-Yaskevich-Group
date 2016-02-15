@@ -1,0 +1,13 @@
+dependencies {
+    compile 'org.fluttercode.datafactory:datafactory:0.8'
+    compile 'org.jooq:jooq:3.7.2'
+    compile 'mysql:mysql-connector-java:5.1.6'
+}
+
+task run(type: JavaExec) {
+    main = 'by.epam.mentoring.Main'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+
+

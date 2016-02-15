@@ -1,2 +1,9 @@
-include 'jmp-01-principle-of-software-development', 'jmp-03-creational-patterns', 'jmp-04-structural-patterns', 'jmp-05-classloaders'
+include 'jmp-01-principle-of-software-development',
+        'jmp-03-creational-patterns',
+        'jmp-04-structural-patterns',
+        'jmp-05-classloaders'
+include 'jmp-06-07-memory-managment-gc'
+include 'jmp-08-multithreading'
+include 'jmp-09-troubleshooting'
+include 'jmp-10-sql'
 
