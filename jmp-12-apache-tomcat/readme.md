@@ -27,29 +27,29 @@ JkWorkersFile path/to/propeties/workers.properties
 ### Tomcat configuration
 * I u need specify env variables for the server, create `CATALINA_HOME` key with the `path/to/tomcat/` as a value.
 * We need to specify listening port for Tomcat, cuz by default it has the same value as Apache web server. Specify port value at `tomcat/conf/server.xml`:
-```
+```xml
 <Connector port="NEW_VALUE" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
 ```
 * Also config for `ajp` should be uncommented and available (with the same values, which are already set in the `workers.properties`):
-```
+```xml
 <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
 ```
 
 ### Configuration of ur application:
 * U should exclude ur static resources from result war. For example, if u use maven as a build tool for ur web project, for war plugin it will be: 
-```
+```xml
 <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				...
-				<configuration>
-     ...
-					<packagingExcludes>
-         resources/**
-     </packagingExcludes>
-				</configuration>
-			</plugin>
-			```
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-war-plugin</artifactId>
+		...
+		<configuration>
+     		...
+			<packagingExcludes>
+        			resources/**
+     			</packagingExcludes>
+		</configuration>
+</plugin>
+```
 * Then build ur project to get war for deploying.
 
 
