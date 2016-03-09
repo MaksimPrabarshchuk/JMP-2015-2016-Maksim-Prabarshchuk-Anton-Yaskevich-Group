@@ -1,9 +1,9 @@
 # Tomcat and Apache integration.
 
 Fst u need:
-1. [Tomcat v9+](http://tomcat.apache.org/download-90.cgi).
-2. [Apache v2.4+](https://www.apachelounge.com/download/).
-3. [Tomcat connector (mod_jk) v1.2+](https://www.apachelounge.com/download/)
+ 1. [Tomcat v9+](http://tomcat.apache.org/download-90.cgi).
+ 2. [Apache v2.4+](https://www.apachelounge.com/download/).
+ 3. [Tomcat connector (mod_jk) v1.2+](https://www.apachelounge.com/download/)
 
 Apache confihuration:
 Main config of the server located at: `path/to/ur/server/conf/httpd.conf`
