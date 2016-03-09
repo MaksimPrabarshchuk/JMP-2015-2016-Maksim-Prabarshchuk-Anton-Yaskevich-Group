@@ -1,5 +1,5 @@
 # Tomcat and Apache integration.
-###Integrate two servers for better performance and work with static and synamic resources.
+###Integrate two servers for better performance and work with static and dynamic resources.
 
 Fst u need:
  1. [Tomcat v9+](http://tomcat.apache.org/download-90.cgi).
