@@ -10,16 +10,16 @@ Fst u need:
 * Fst of all it's necessary to replace default paths in configuration with the path of the server's location.
 * On the next step u should add downloaded mod_jk module file(`mod_jk.so` or `mod_jk.dll`) into the Apache server modules directory, which  is located at: `path/to/ur/server/modules`. 
 * Also u shoud to add new condiguration into the `http.conf` for loading `mod_jk` module:
-  ```
-  LoadModule jk_module modules/mod_jk.so
-  ```
+```
+LoadModule jk_module modules/mod_jk.so
+```
 * U need to specify workers for mod_jk with special properties. For example, add `workers.properties` file into Apache conf directory and  fill it with properties for the worker: 
-  ```
-  worker.list=ajp13
-  worker.ajp13.type=ajp13
-  worker.ajp13.host=localhost
-  worker.ajp13.port=8009
-  ```
+```
+worker.list=ajp13
+worker.ajp13.type=ajp13
+worker.ajp13.host=localhost
+worker.ajp13.port=8009
+```
  
 
 
