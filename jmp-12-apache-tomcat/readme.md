@@ -1,4 +1,5 @@
 # Tomcat and Apache integration.
+###Integrate two servers for better performance and work with static and synamic resources.
 
 Fst u need:
  1. [Tomcat v9+](http://tomcat.apache.org/download-90.cgi).
@@ -52,5 +53,17 @@ JkWorkersFile path/to/propeties/workers.properties
 ```
 * Then build ur project to get war for deploying.
 
-
-
+### Deploying stage
+* Get ur war from the build destination.
+* Run Tomcat, for example, with 'bin/startup.bat`.
+* Use app manager to deploy ur war.
+* Get ur project static resources and palce them into Apache server `path/to/apache/htdocs/`. Don't forget to specify path to ur resources exactly like paths in ur web application.
+* Now u can set patterns for `mod_jk` module in Apache `httpd.conf` to make correct redirections for dynamic resources (includes for dynamic, excludes for static):
+```
+JkMount /UR_APP_NAME/* WORKER_NAME
+JkUnMount /PATH_TO_STATIC_RESOURCES/* WORKER_NAME
+```
+### Test the result
+* Try to request ur dynamic resources
+* Try to request ur static resources 
+* Check hosts and paths in the requests to verify integration works
