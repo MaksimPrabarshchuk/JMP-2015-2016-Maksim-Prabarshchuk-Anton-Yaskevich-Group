@@ -6,4 +6,5 @@ include 'jmp-06-07-memory-managment-gc'
 include 'jmp-08-multithreading'
 include 'jmp-09-troubleshooting'
 include 'jmp-10-sql'
+include 'jmp-11-gradle'
 

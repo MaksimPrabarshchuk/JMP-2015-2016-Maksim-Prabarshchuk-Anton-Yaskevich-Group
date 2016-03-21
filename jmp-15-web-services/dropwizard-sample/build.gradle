@@ -1,0 +1,44 @@
+group 'dropwizard'
+version '0.0.1'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+mainClassName = 'com.epam.AppInit'
+
+project.ext {
+    dropwizardVersion = '0.9.2'
+}
+
+dependencies {
+    compile "io.dropwizard:dropwizard-core:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-client:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-jackson:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-assets:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-configuration:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-lifecycle:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-jersey:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-servlets:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-jetty:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-views:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-hibernate:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-views-mustache:${dropwizardVersion}"
+    compile "io.dropwizard:dropwizard-views-freemarker:${dropwizardVersion}"
+    compile "mysql:mysql-connector-java:5.1.38"
+
+    testCompile 'junit:junit:4.12'
+    testCompile "io.dropwizard:dropwizard-testing:${dropwizardVersion}"
+}
+
+run {
+    args 'server', 'config.yml'
+    jvmArgs '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8001'
+}
