@@ -1,0 +1,9 @@
+dependencies {
+    compile 'org.javassist:javassist:3.20.0-GA'
+}
+
+task run(type: JavaExec) {
+    main = 'by.epam.mentoring.Main'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
